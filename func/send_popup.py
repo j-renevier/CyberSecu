@@ -40,6 +40,3 @@ def show_popup():
         popups.append(popup)
 
     tk.mainloop()
-
-
-show_popup()

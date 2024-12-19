@@ -53,19 +53,25 @@ def decrypt_files(files, key):
             # Ecrit le contenu déchiffré dans le fichier
             with open(file, 'wb') as f:
                 f.write(content_decrypt)
+
+            print("Vos fichiers ont bien été rendu")
         
         except Exception as e:
             print(f"{e}")
 
-    print(f"Merci !!")
 
-# Récupération de la clé
-key_file = "key.bin" 
-resultats_key_file = find_file(key_file)
-key = get_key(resultats_key_file[0])
+def decrypt_main():
+    # Récupération de la clé
+    key_file = "key.bin" 
+    resultats_key_file = find_file(key_file)
+    key = get_key(resultats_key_file[0])
 
-# Récupération du dossier
-folder = "dossier_confidentiel"
-resultats_folder = find_folder(folder)
-files = list_file(resultats_folder[0])
-decrypt_files(files, key)
+    # Récupération du dossier
+    folder = "dossier_confidentiel"
+    resultats_folder = find_folder(folder)
+    files = list_file(resultats_folder[0])
+
+    # Déchiffrement des fichiers
+    decrypt_files(files, key)
+
+decrypt_main()
