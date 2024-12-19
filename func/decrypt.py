@@ -50,9 +50,16 @@ def decrypt_files(files, key):
                 cipher = AES.new(key, AES.MODE_CBC, iv) # Initialise le déchiffrement
                 content_decrypt = unpad(cipher.decrypt(content[16:]), AES.block_size) # Déchiffre le contenu
 
+            # renomme le fichier sans le .enc
+            if file.endswith(".enc"):
+                decrypted_file = file[:-4]  # Supprime les 4 derniers caractères
+            else:
+                decrypted_file = file
             # Ecrit le contenu déchiffré dans le fichier
-            with open(file, 'wb') as f:
+            with open(decrypted_file, 'wb') as f:
                 f.write(content_decrypt)
+            file_path = file.replace("\\", "/") # Convertit les antislashs en barres obliques. Nécessaire pour supprimer le fichier
+            os.remove(file_path) # Supprime le fichier chiffré
 
             print("Vos fichiers ont bien été rendu")
         
