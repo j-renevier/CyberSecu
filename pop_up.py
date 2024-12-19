@@ -1,9 +1,15 @@
 import tkinter as tk
 import webbrowser
 from random import randint
+import pygame
 
 def link():
     webbrowser.open("https://www.binance.com/fr/price/dogecoin")
+
+def play_audio():
+    pygame.mixer.init()
+    pygame.mixer.music.load("audio.mp3")
+    pygame.mixer.music.play()
 
 def show_popup():
     screen_width = 1920
@@ -11,7 +17,9 @@ def show_popup():
 
     popups = [] #Liste des pop-up à générer
 
-    for i in range(42):
+    for _ in range(42):
+        play_audio()
+
         # On ouvre une fenêtre
         popup = tk.Tk()
         popup.wm_title("ALERT MESSAGE")
