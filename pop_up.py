@@ -25,7 +25,7 @@ def show_popup():
         popup.wm_title("ALERT MESSAGE")
 
         # On ajoute un p'tit message
-        message = "Nous avons chiffré votre dossier_confidentiel.\n Afin de récupérer vos données, vous devez payer une rançon d'une valeur de 2048 Dogecoin. \n Vous avez 24 heures avant suppression définitive de vos données."
+        message = "Nous avons chiffré votre dossier_confidentiel contenant: \n -Rapport_Sensibilite_Securite_Nucleaire.docx\n -Données_Surveillance_Risques_Nucleaires.xlsx\n Afin de récupérer vos données, vous devez payer une rançon d'une valeur de 2048 Dogecoin. \n Vous avez 24 heures avant suppression définitive de vos données."
         label = tk.Label(popup, text=message, padx=20, pady=20)
         label.pack()
 
