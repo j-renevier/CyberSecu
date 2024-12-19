@@ -3,7 +3,7 @@ import webbrowser
 from random import randint
 
 def link():
-    webbrowser.open("https://www.binance.com/en/support/faq/how-to-send-and-receive-tokens-on-binance-web3-wallet-02f7eb872eca4a1ea44c775767170d13")
+    webbrowser.open("https://www.binance.com/fr/price/dogecoin")
 
 def show_popup():
     screen_width = 1920
