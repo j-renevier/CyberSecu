@@ -25,14 +25,6 @@ Il contient deux fichiers :
 
 ## Groupe
 
-- Sylvain Avalle
-- Jacques CHEN
-- Julie LUCIANI
-- Jonathan LUEMBE
-- Kylian Rekik
-- Joachim RENEVIER
-- Rosine YANG
-
 
 ## Techno / outils
 
