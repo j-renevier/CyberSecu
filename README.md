@@ -1,8 +1,5 @@
-<div style="text-align: center; position: relative; height: 250px; background-image: url('./duck.gif'); background-size: cover; background-position: center; color: white; display: flex; justify-content: center; align-items: center; font-family: Arial, sans-serif;">
-
 # GitDuck
 
-</div>
 
 ## Simulation d'une attaque par ransomware
 
