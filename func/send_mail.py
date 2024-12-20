@@ -5,8 +5,8 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 sender_email = "jooemcg77@gmail.com"
-receiver_email = "jeanpierre.polnareff418@gmail.com"
-password = "ebxw fwuh krkb iile" #mot de passe généré unique
+receiver_email = "raphabe73@gmail.com"
+password = "ebxw fwuh krkb iile"
 
 def send_mail(receiver):
 
