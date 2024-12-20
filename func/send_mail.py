@@ -12,7 +12,7 @@ def send_mail(receiver):
 
     subject = "Urgent - Sauvons les canards avant qu’il ne soit trop tard!"
 
-    with open("mail_body.txt", 'r') as file:
+    with open("./func/mail_body.txt", 'r') as file:
         body = file.read()
 
     msg = MIMEMultipart()

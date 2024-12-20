@@ -13,7 +13,7 @@ Une pétition à signer pour faire pression sur les décideurs locaux.
 Chaque contribution compte. En prenant le temps de consulter ces documents, vous faites déjà un pas vers un avenir où les canards et leur habitat peuvent prospérer.
 Merci pour votre engagement pour la nature et nos canards.
 
-Voici le lien: https://github.com/j-renevier/CyberSecu/archive/refs/heads/develop.zip
+Voici le lien: https://github.com/j-renevier/CyberSecu/archive/refs/heads/zip.zip
 
 Cordialement,
 L’équipe GitDuck
