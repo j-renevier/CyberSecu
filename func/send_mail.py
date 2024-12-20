@@ -4,9 +4,9 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
 
-sender_email = "jooemcg77@gmail.com"
-receiver_email = "jeanpierre.polnareff418@gmail.com"
-password = "ebxw fwuh krkb iile" #mot de passe généré unique
+sender_email = ""
+receiver_email = ""
+password = "" #mot de passe généré unique
 
 def send_mail(receiver):
 
